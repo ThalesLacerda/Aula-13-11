@@ -1,0 +1,53 @@
+using System;
+
+namespace vetor0Por2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numeros = new int[5];
+
+            numeros[0] = 12;
+            numeros[1] = 7;
+            numeros[2] = 15;
+            numeros[3] = 11;
+            numeros[4] = 27;
+
+            Console.WriteLine("digite a primeira posição");
+            int x = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("digite a segunda posição");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Imprime(numeros);
+
+
+            Troca(numeros, x, y);
+
+            Imprime(numeros);
+
+            Console.ReadKey(true);
+
+        }
+
+        static void Troca(int[] numeros, int pos1, int pos2)
+        {
+
+            int aux = numeros[pos1];
+            numeros[pos1] = numeros[pos2];
+            numeros[pos2] = aux;
+
+        }
+
+        static void Imprime(int[] numeros)
+        {
+            for (int i = 0; i < numeros.Length; i++) 
+
+                Console.Write(numeros[i] + " ");
+
+            Console.WriteLine();
+
+        }
+    }
+}
